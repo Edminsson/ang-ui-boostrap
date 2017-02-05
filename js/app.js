@@ -30,6 +30,13 @@ angular.module('app', ['ngAnimate','ui.bootstrap'])
         item: items[0]
     };
 
+    $scope.valj = function(v){ alert(v); };
+    $scope.lista = [
+        {label: "kolla vilken rolig grej", value:1},  
+        {label: "det här var inte så pjokigt heller", value:2},  
+        {label: "oj, vad spännande", value:3}  
+    ];
+
     $scope.ok = function () {
         $uibModalInstance.close($scope.selected.item);
     };

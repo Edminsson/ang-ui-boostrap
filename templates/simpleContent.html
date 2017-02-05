@@ -1,7 +1,7 @@
 <div class="modal-header">
     <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
 </div>
-<div class="modal-body container" id="modal-body">
+<div class="modal-body" id="modal-body">
     <ul>
         <li ng-repeat="item in items">
             <a href="#" ng-click="$event.preventDefault();  selected.item = item">{{ item }}</a>
@@ -36,8 +36,17 @@
 
         </div>
         <div class="col-xs-6">
-          <span>Efternamn</span>
-          <input class="form-control" placeholder="Efternamn" type="text">
+            <div class="btn-group" uib-dropdown is-open="status.isopen">
+            <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+                Välj fält <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li ng-repeat="choice in lista">
+                    <a href>{{choice.label}}</a>
+                </li>
+            </ul>
+            </div>
+
         </div>
       </div>
 
