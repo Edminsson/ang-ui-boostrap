@@ -1,12 +1,48 @@
 <div class="modal-header">
     <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
 </div>
-<div class="modal-body" id="modal-body">
+<div class="modal-body container" id="modal-body">
     <ul>
         <li ng-repeat="item in items">
             <a href="#" ng-click="$event.preventDefault();  selected.item = item">{{ item }}</a>
         </li>
     </ul>
+
+    <div class="boxen">
+      <div class="boxen row">
+        <div class="col-xs-6">
+          <span>Förnamn</span>
+          <input class="form-control" placeholder="Förnamn" type="text">
+        </div>
+        <div class="col-xs-6">
+          <span>Efternamn</span>
+          <input class="form-control" placeholder="Efternamn" type="text">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6">
+          <span>Förnamn</span>
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Fält
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hola">
+              <li ng-repeat="item in lista"><a ng-click="valj(item.value)" href="#">{{item.label}}</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-xs-6">
+          <span>Efternamn</span>
+          <input class="form-control" placeholder="Efternamn" type="text">
+        </div>
+      </div>
+
+    </div>
+
     Selected: <b>{{ selected.item }}</b>
 </div>
 <div class="modal-footer">
