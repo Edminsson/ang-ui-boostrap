@@ -6,3 +6,5 @@ Angular UI bootstrap tests
 - add module to html file, angular module and controller.
 - don't forget to include ui-bootstrap-tpls.js
 - it seems you need the css from bootstrap but no necessarily the ones from angular-ui-boostrap
+- added angular-animation to the project.
+
